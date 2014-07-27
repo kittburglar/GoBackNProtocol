@@ -1,0 +1,19 @@
+This was built on linux.student.cs.uwaterloo.ca system.
+Using the make version on the linux.student.cs.uwaterloo.ca servers.
+Using javac compiler.
+
+1. In an empty directory type and enter "make" to get the source files.
+
+2. In the first window, ssh to host1 (ubuntu1204-002.student.cs.uwaterloo.ca).
+
+3. Go to the directory where the files are stored and type: 
+./nEmulator-linux386 9491 host2 9494 9493 host3 9492 <maximum delay in milliseconds> <packet discard probability> <verbose-mode>
+
+4. In the second window ssh to host2 (ubuntu1204-004.student.cs.uwaterloo.ca).
+
+5. Go to the directory where the files are stored and type:
+java receiver host1 9493 9494 <output file>
+
+6. In the third window ssh to host3 (ubuntu1204-006.student.cs.uwaterloo.ca).
+
+7. java sender host1 9491 9492 <input file>
